@@ -1,0 +1,45 @@
+current directory: /Users/kogoaraki/dev/2019/rails/nikki/vendor/bundle/ruby/2.6.0/gems/mysql2-0.5.2/ext/mysql2
+/Users/kogoaraki/.rbenv/versions/2.6.3/bin/ruby -I /Users/kogoaraki/.rbenv/versions/2.6.3/lib/ruby/2.6.0 -r ./siteconf20190928-62658-m3j3jm.rb extconf.rb --with-opt-dir\=/usr/local/opt/openssl
+checking for rb_absint_size()... yes
+checking for rb_absint_singlebit_p()... yes
+checking for rb_wait_for_single_fd()... yes
+-----
+Using mysql_config at /usr/local/bin/mysql_config
+-----
+checking for mysql.h... yes
+checking for errmsg.h... yes
+checking for SSL_MODE_DISABLED in mysql.h... no
+checking for MYSQL_OPT_SSL_ENFORCE in mysql.h... yes
+checking for MYSQL.net.vio in mysql.h... no
+checking for MYSQL.net.pvio in mysql.h... yes
+checking for MYSQL_ENABLE_CLEARTEXT_PLUGIN in mysql.h... yes
+checking for SERVER_QUERY_NO_GOOD_INDEX_USED in mysql.h... yes
+checking for SERVER_QUERY_NO_INDEX_USED in mysql.h... yes
+checking for SERVER_QUERY_WAS_SLOW in mysql.h... yes
+checking for MYSQL_OPTION_MULTI_STATEMENTS_ON in mysql.h... yes
+checking for MYSQL_OPTION_MULTI_STATEMENTS_OFF in mysql.h... yes
+checking for my_bool in mysql.h... yes
+-----
+Setting rpath to /usr/local/Cellar/mariadb/10.4.6_1/lib
+-----
+creating Makefile
+
+current directory: /Users/kogoaraki/dev/2019/rails/nikki/vendor/bundle/ruby/2.6.0/gems/mysql2-0.5.2/ext/mysql2
+make "DESTDIR=" clean
+
+current directory: /Users/kogoaraki/dev/2019/rails/nikki/vendor/bundle/ruby/2.6.0/gems/mysql2-0.5.2/ext/mysql2
+make "DESTDIR="
+compiling client.c
+client.c:140:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+compiling infile.c
+compiling mysql2_ext.c
+compiling result.c
+compiling statement.c
+linking shared-object mysql2/mysql2.bundle
+
+current directory: /Users/kogoaraki/dev/2019/rails/nikki/vendor/bundle/ruby/2.6.0/gems/mysql2-0.5.2/ext/mysql2
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 mysql2.bundle ./.gem.20190928-62658-mn7bvr/mysql2

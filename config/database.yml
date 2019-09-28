@@ -1,0 +1,27 @@
+default: &default
+  # adapter: sqlite3 変更
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  encoding: unicode # 追加
+  username: kogoaraki # 追加
+  password:       # 追加
+  host: localhost # 追加
+
+development:
+  <<: *default
+  # database: db/development.sqlite3 変更
+  database: MyApp_development
+
+test:
+  <<: *default
+  # database: db/test.sqlite3 変更
+  database: MyApp_test
+
+# Herokuデプロイ時に再度見直す
+production:
+  <<: *default
+  # database: db/production.sqlite3 変更
+  # database: MyApp_production
+  # username: MyApp # 追加
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %> # 追加
