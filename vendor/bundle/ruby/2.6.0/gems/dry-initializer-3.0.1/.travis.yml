@@ -1,0 +1,28 @@
+---
+language: ruby
+cache: bundler
+bundler_args: --without benchmarks tools
+script:
+  - bundle exec rake spec
+rvm:
+  - 2.3.8
+  - 2.4.6
+  - 2.5.5
+  - 2.6.2
+  - jruby-9.2.7.0
+  - jruby-9000
+  - rbx-3
+  - ruby-head
+  - truffleruby
+env:
+  global:
+    - JRUBY_OPTS='--dev -J-Xmx1024M'
+matrix:
+  allow_failures:
+    - rvm: rbx-3
+    - rvm: ruby-head
+    - rvm: jruby-head
+    - rvm: truffleruby
+  include:
+    - rvm: jruby-head
+      before_install: gem install bundler --no-document
